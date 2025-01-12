@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(3, 3, 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginform {
+    width: min(450px, 95%); 
+    height: 580px;
+    border:solid 1px blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 10px;
+    transition: all 1s;
+}
+.loginform.hover{
+    box-shadow: 0 0 100px 0px rgb(22, 119, 203) 0 0 400px 20px rgb(22, 119, 203);
+    animation:blink is infinite;
+    background-color: rgb(45, 41, 41);
+
+}
+@keyframes blink {
+    0%,100%{   
+        box-shadow: 0 0 100px 0px rgb(22, 119, 203) 0 0 400px 20px rgb(22, 119, 203);
+    }
+    40%,50%,60%{
+        box-shadow: 0 0 50px 0px rgb(22, 119, 203) 0 0 100px 0px rgb(22, 119, 203);
+    }
+}
+.inputgroup
+{
+  position: relative;  
+ 
+  height: 50px;
+  width: 85% ;
+}
+.inputgroup input
+{
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    outline: none;
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:solid 1px red;
+    color: white;
+    font-size: 20px;
+
+    transition: all 200px;
+}
+.inputgroup label
+{
+    position: absolute;
+    transition: all 200px;
+    color: red;
+}
+.inputgroup input:hover label,
+.inputgroup input:focus label,
+.inputgroup input:valid label
+{
+    transform: translateY(-20px);
+    color: rgb(19, 41, 123);
+}
+.inputgroup input:hover ,
+.inputgroup input:focus ,
+.inputgroup input:valid 
+{
+    border-bottom:solid 1px rgb(0, 89, 255);
+}  
+.topmargin
+{
+    margin-top:  50px;
+
+}
+.topmarginlarge{
+    margin-top: 80px;
+}
+.divcallforaction
+{
+    width:85%;
+    height:45px;
+    background-color: rgb(74, 120, 105);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.btnlogin
+{
+    
+    border:solid 1px blue;
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+   
+    color:white;
+    transition: all 200px;
+} 
+.btnlogin:hover{
+    box-shadow: 0 0 100px rgb(255, 0, 187);
+    transform: translateY(-5px);
+}
+.inactivecolor
+{
+    background-color: rgb(255, 0, 132);
+}
+.activecolor
+{
+    background-color: rgb(0, 174, 255);
+}
